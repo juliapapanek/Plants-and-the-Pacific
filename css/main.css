@@ -1,0 +1,370 @@
+
+/* ==========================================================================
+   Base styles:
+   ========================================================================== */
+/* Fix to include padding and border in the total width for each element */
+
+/*Fonts*/
+@font-face {
+  font-family: "arcadia";
+  src: url("arcadia-thin.otf");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Fix for responsive images */
+img {
+  max-width: 100%;
+}
+
+/*Header Section*/
+
+header {
+  background: url("../img/Tomatoes2.jpg");
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  /*position: absolute;*/
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 90px;
+  margin-top: 15%;
+  margin-bottom: 25%;
+  font-family: "arcadia", sans-serif;
+  font-weight: lighter;
+}
+
+/*Nav Section*/
+
+
+nav {
+  width: 100%;
+  text-align: right;
+  clear:both;
+}
+
+nav ul {
+  margin: 0px 60px 0px 0px;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  font-family: "arcadia", sans-serif;
+}
+
+nav a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  margin: 20px;
+  padding: 7px;
+  font-size: 16px;
+  font-weight: lighter;
+}
+
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: white;
+  box-shadow: 0 3px 11px rgba(0, 0, 0, .1);
+  color: grey;
+  opacity: 0.9;
+  transition: all 300ms ease-out;
+}
+
+.sticky-nav-wrapper {
+  margin-bottom: -80px;
+}
+
+.slide-section {
+  border-bottom: 1px solid rgba(255, 255, 255, 0);
+}
+
+.navhover {
+  border-bottom: 1px solid white;
+}
+
+.navhover-black {
+  border-bottom: .5px solid black;
+  opacity: 0.9;
+}
+
+.site-name {
+  font-family: "arcadia", sans-serif;
+  color: black;
+  text-decoration: none;
+  float:left;
+  margin-left: 87px;
+  margin-top: 27px;
+  margin-bottom: 20px;
+  font-weight: lighter;
+  font-size: 16px;
+  display: none;
+}
+
+/*Media Queries*/
+
+@media (max-width: 650px) {
+
+ nav a {
+   display: none;
+   font-size: 2.5em;
+   padding: 50px;
+ }
+
+ nav li {
+  display: none;
+  text-align: center;
+ }
+
+ nav {
+   /*padding-bottom: 100%;*/
+ }
+
+ .display-none {
+   display: none;
+ }
+
+}
+
+
+/*Intro Section*/
+
+
+h2 {
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 7%;
+  font-family: "arcadia", sans-serif;
+  font-weight: lighter;
+  font-size: 35px;
+}
+
+#intro p {
+  text-align: center;
+  padding: 0 15%;
+  font-family: "arcadia", sans-serif;
+  font-weight: lighter;
+  padding-bottom: 10%;
+  line-height: 170%;
+  /*font-weight: lighter;*/
+}
+
+/*Image Sections*/
+
+#second-image {
+  background: url("../img/RiceBowl2.jpg");
+  height: 100%;
+  max-width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  padding-top: 50%;
+}
+
+#third-image {
+  background: url("../img/Herbs.jpg");
+  height: 100%;
+  max-width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  padding-top: 50%;
+}
+
+#fourth-image {
+  background: url("../img/LettuceWrapBowls.jpg");
+  height: 100%;
+  max-width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  padding-top: 50%;
+}
+
+/*Recipe Gallery*/
+
+.recipe-gallery-images {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.recipe-photo {
+  width: 400px;
+  height: 550px;
+  padding: 40px;
+  align: center;
+  position: relative;
+}
+
+.overlay {
+  width: 320px;
+  height: 480px;
+  position: absolute;
+  background-color: rgba(204, 230, 255, .7);
+  top: 0;
+  left: 0;
+  margin-left: 40px;
+  margin-top: 40px;
+  padding: 0;
+}
+
+.recipe-photo .overlay {
+  opacity: 0;
+  transition: .6s ease;
+}
+
+.recipe-photo:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 0;
+  transform: translate(-50%, -50%);
+  font-family: "arcadia", sans-serif;
+  font-weight: lighter;
+
+}
+
+/*About Section */
+
+#about p {
+  text-align: justify;
+  padding: 0 15%;
+  font-family: "arcadia", sans-serif;
+  font-weight: lighter;
+  line-height: 170%;
+}
+
+#about {
+  padding-bottom: 10%;
+}
+
+#about img {
+  width: 100%;
+  height: 100%;
+  padding: 0 15%;
+  margin-bottom: 1%;
+  align: center;
+}
+
+/*Form Section*/
+
+.row {
+  width: 100%;
+}
+
+.row > input {
+  padding: 10px;
+  margin: 12px;
+  border: 0.25px solid black;
+  width: 100%;
+}
+
+.row > textarea {
+  width: 100%;
+  margin: 12px;
+  border: 0.25px solid black;
+  padding: 10px 10px 60px 10px;
+}
+
+#contact {
+  position: relative;
+  width: 50%;
+  margin: 0 auto;
+}
+
+#contact p {
+  line-height: 170%;
+  font-family: "arcadia", sans-serif;
+  font-weight: lighter;
+  padding: 0 15%;
+  text-align: center;
+}
+
+input::placeholder {
+  font-family: "arcadia", sans-serif;
+  font-weight: lighter;
+  color: black;
+}
+
+textarea::placeholder {
+  font-family: "arcadia", sans-serif;
+  font-weight: lighter;
+  color: black;
+}
+
+.container {
+  border: 1px solid black;
+  padding-right: 23px;
+  padding-bottom: 7%;
+  padding-top: 7%;
+  margin-top: 7%;
+}
+
+/*This is h3 not h2 to control for the margin with border*/
+h3 {
+  text-align: center;
+  padding-bottom: 20px;
+  font-family: "arcadia", sans-serif;
+  font-weight: lighter;
+  font-size: 35px;
+}
+
+
+button {
+  border: 0.25px solid black;
+  background-color: white;
+  color: black;
+  font-family: "arcadia", sans-serif;
+  font-weight: lighter;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+}
+
+button:hover {
+  background-color: rgba(204, 230, 255, .6);
+  transition: .7s ease;
+}
+
+/*Footer Section*/
+
+footer p {
+  text-align: center;
+  font-family: "arcadia", sans-serif;
+  font-weight: lighter;
+  color: black;
+  font-size: 12px;
+  margin-top: 90px;
+  margin-bottom: 30px
+}

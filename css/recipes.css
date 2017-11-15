@@ -1,0 +1,265 @@
+/*Fonts*/
+@font-face {
+  font-family: "arcadia";
+  src: url("arcadia-thin.otf");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Fix for responsive images */
+img {
+  max-width: 100%;
+}
+
+/*Wrapper Section */
+
+.recipe-wrapper {
+  display: flex;
+  background-color: rgba(230, 243, 255, .7);
+  /*padding: 0 15%;*/
+}
+
+.recipe-wrapper-margin {
+  /*margin: 20px 50px;*/
+  margin: 0 auto;
+  display: flex;
+}
+
+/*Nav Section*/
+
+nav {
+  width: 100%;
+  text-align: right;
+}
+
+nav ul {
+  margin: 0px 60px 0px 0px;
+  padding: 0;
+}
+
+nav a {
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+  margin: 20px;
+  padding: 7px;
+  font-size: 16px;
+  font-weight: lighter;
+}
+
+nav li {
+  display: inline-block;
+  font-family: "arcadia", sans-serif;
+}
+
+.site-name {
+  font-family: "arcadia", sans-serif;
+  color: black;
+  text-decoration: none;
+  float:left;
+  margin-left: 87px;
+  margin-top: 27px;
+  margin-bottom: 20px;
+  font-weight: lighter;
+  font-size: 16px;
+}
+
+.sticky-nav-wrapper {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: white;
+  box-shadow: 0 3px 11px rgba(0, 0, 0, .1);
+  color: grey;
+  opacity: 0.9;
+  transition: all 300ms ease-out;
+}
+
+.navhover-black {
+  border-bottom: .5px solid black;
+  opacity: 0.9;
+}
+
+.border {
+  border-bottom: 1px solid rgba(255, 255, 255, 0);
+}
+
+
+/*Recipe Title*/
+
+h1 {
+  font-family: "arcadia", sans-serif;
+  font-weight: lighter;
+  margin-top: 120px;
+  margin-right: auto;
+  margin-left: 87px;
+  position: relative;
+}
+
+/*Recipe Photo & Steps Section */
+
+.image-slider {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.image-holder {
+  width: 600px;
+  height: 700px;
+  position: relative;
+}
+
+.image-holder img {
+  width: 600px;
+  height: 700px;
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+}
+
+.image-holder img.active {
+  display: inline-block;
+}
+
+.steps-slider {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: "arcadia", sans-serif;
+  font-weight: lighter;
+  line-height: 170%;
+}
+
+.steps-slider h3 {
+  padding-top: 40px;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.steps-slider p {
+  font-size: 16px;
+  text-align: center;
+  padding: 0 17%;
+}
+
+.steps-holder {
+  position: relative;
+  width: 500px;
+  height: 700px;
+  overflow: hidden;
+  display: none;
+}
+
+.steps {
+  width: 500px;
+  height: 700px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: white;
+}
+
+.steps-active {
+  display: block;
+}
+
+.ingredients-section {
+  line-height: 140%;
+}
+
+
+/*Button Section */
+
+.buttons-line {
+  text-align: right;
+  margin-right: 30px;
+}
+
+.buttons-line p {
+  text-align: right;
+  margin-top: 0;
+  margin-right: 5px;
+  margin-left: 0;
+  margin-bottom: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+.button {
+  background-color: rgba(230, 243, 255, .7);
+  border: none;
+  color: black;
+  font-family: "arcadia", sans-serif;
+  font-weight: lighter;
+  display: inline-block;
+  margin: 0 2px;
+  text-decoration: none;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.button:focus, .button:active, .button.active, .button:focus:active {
+  background-image: none;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background-color: #707070;
+}
+
+.fa-pencil-square-o {
+  color: 	#707070;
+}
+
+
+/*Next Step Section */
+
+.next-step-section {
+  border-top: 4px dotted 	#E8E8E8;
+  text-align: center;
+  margin-top: 15%;
+  margin-left: 15%;
+  margin-right: 15%;
+  position: absolute;
+  top: 370px;
+  width: 350px;
+}
+
+.next-step-section h4 {
+  font-size: 18px;
+}
+
+.step-1-button, .step-2-button, .step-3-button, .step-4-button {
+  background-color: rgba(230, 243, 255, .7);
+  border: none;
+  color: black;
+  font-family: "arcadia", sans-serif;
+  font-weight: lighter;
+  text-decoration: none;
+  text-align: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 0;
+}
+
+.fa-angle-right {
+  color: 	#C0C0C0;
+}
+
+/*Footer Section*/
+
+footer p {
+  text-align: center;
+  font-family: "arcadia", sans-serif;
+  font-weight: lighter;
+  color: black;
+  font-size: 12px;
+  margin-top: 90px;
+  margin-bottom: 30px
+}
